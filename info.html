@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta http-equiv="Content-Type" content="charset=UTF-8">
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Info</title>
+        <!--link e script para mapa-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+        <!--botao reset-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script> 
+            $(function(){
+            $("#header").load("header.html"); 
+            $("#footer").load("footer.html"); 
+            });
+        </script> 
+        
+    </head>
+
+    <main>
+        <div id="header"></div>
+
+        <div class=row>
+            <section id="info_v4red"></section>
+            <div class="column">
+                <div class="content-wrapper">
+                    <img id=featured alt="v4_red" src="imagens/v4_red/piscina1.jpg">
+                    <div id="slide-wrapper">
+                        
+                        <img id="slideLeft" class="arrow" alt="seta" src="arrow-left.png">
+                        <div id="slider">
+                            
+                            <img class="thumbnail active" alt="v4_red" src="imagens/v4_red/piscina1.jpg">
+                            <img class="thumbnail" alt="v4_red" src="imagens/v4_red/piscina2.jpg">
+                            <img class="thumbnail" alt="v4_red" src="imagens/v4_red/casa_de_banho.jpg">
+                            <img class="thumbnail" alt="v4_red" src="imagens/v4_red/quarto1.JPG">
+                            <img class="thumbnail" alt="v4_red" src="imagens/v4_red/quarto2.jpg">
+                            <img class="thumbnail" alt="v4_red" src="imagens/v4_red/quarto3.jpg">
+                            <img class="thumbnail" alt="v4_red" src="imagens/tenis.jpg">
+                            
+                        </div>
+                        <img id="slideRight" class="arrow" alt="seta" src="arrow-right.png">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                
+                <div class="titulo"><h2>Vivenda V4 RED</h2>
+                    <div class="descriçãoRed">
+                    
+                            <h5>Composição do alojamento</h5>
+                            <ul> 
+                                <li>Varanda</li>
+                                <li>2 quartos com 1 Cama de casal, 1 Cama individual</li>
+                                <li>2 quartos com 1 Cama de casal</li>
+                                <li>Pátio</li>
+                                <li>Cozinha independente</li>
+                                <li>Duche</li>
+                                <li>Sala</li>
+                                <li>Casa de banho</li>
+                                <li>Sala de estar com 1 Sofá cama</li>
+                                <li>Terraço</li>
+                                <li>Terraço coberto</li>
+                            </ul>
+                            <h5>Características  da piscina</h5>
+                            <ul>
+                                <li>Piscina privada </li>
+                                <li>Tipo de piscina : Enterrada no solo</li>
+                                <li>Forma da piscina : Rectangular</li>
+                                <li>Dimensão da piscina : 10mX5m</li>
+                                <li>Profundidade: Mínimo: 1m, Máximo: 2.2m</li>
+                            </ul>
+                            <h5>Multimédia</h5>
+                            <ul>
+                                <li>TV</li>
+                                <li>Acesso internet</li>
+                                <li>Wi-fi grátis (Wi-fi interior)</li>
+                            </ul>
+                            <h5>Eletrodoméstico</h5>
+                            <ul>
+                                <li>Forno micro ondas</li>
+                                <li>Forno</li>
+                                <li>Cafeteira</li>
+                                <li>Torradeira</li>
+                                <li>Máquina de lavar loiça</li>
+                                <li>Máquina de lavar roupa</li>
+                                <li>Frigorífico</li>
+                                <li>Congelador</li>
+                                <li>Fogão eléctrico/gás</li>
+                                <li>Placa de cozinha</li>
+                                <li>Cafeteira eléctrica</li>
+                                <li>Ferro de engomar</li>
+                            </ul>
+                            <h5>Exterior</h5>
+                            <ul>
+                                <li>Estacionamento individual</li>
+                                <li>Churrasco</li>
+                                <li>Ténis colectivo</li>
+                            </ul>
+                            <h5>Outro</h5>
+                            <ul>
+                                <li>Ar condicionado</li>
+                                <li>Lareira</li>
+                                <li>Berço</li>
+                                <li>Cadeira de bébé</li>
+                                <li>banheira</li>
+                                <li>duche</li>
+                                <li>Espreguiçadeira</li>
+                                <li>Alarme</li>
+                                <li>Caixa-forte</li>
+                                <li>Bilhar</li>
+                                <li>Matraquilhos</li>
+                            </ul>
+                            <h5>Serviços complementares</h5>
+                            <ul>
+                                <li>Lençóis fornecidos</li>
+                                <li>Toalhas fornecidas</li>
+                                <li>Limpeza incluída</li>
+                                <li>Acesso deficientes</li>
+                            </ul>
+                    
+                    </div>
+                </div>    
+            </div>        
+        </div>
+        <div class=row>
+            <section id="info_v4green"></section>
+            <div class="column">
+                <div class="titulo"><h2>Vivenda V4 GREEN</h2>
+                    <div class="descriçãoGreen">
+                        
+                        <h5>Composição do alojamento</h5>
+                        <ul> 
+                            <li>Varanda</li>
+                            <li>2 quartos com 1 Cama de casal, 1 Cama individual</li>
+                            <li>2 quartos com 1 Cama de casal</li>
+                            <li>Pátio</li>
+                            <li>Cozinha independente</li>
+                            <li>Duche</li>
+                            <li>Sala</li>
+                            <li>Casa de banho</li>
+                            <li>Sala de estar com 1 Sofá cama</li>
+                            <li>Terraço</li>
+                            <li>Terraço coberto</li>
+                        </ul>
+                        <h5>Características da piscina</h5>
+                        <ul>
+                            <li>Piscina privada </li>
+                            <li>Tipo de piscina : Enterrada no solo</li>
+                            <li>Forma da piscina : Formato 8</li>
+                            <li>Dimensão da piscina : 12mX6m</li>
+                            <li>Profundidade: Mínimo: 1m, Máximo: 2.2m</li>
+                        </ul>
+                        <h5>Multimédia</h5>
+                        <ul>
+                            <li>TV</li>
+                            <li>Acesso internet</li>
+                            <li>Wi-fi grátis (Wi-fi interior)</li>
+                        </ul>
+                        <h5>Eletrodoméstico</h5>
+                        <ul>
+                            <li>Forno micro ondas</li>
+                            <li>Forno</li>
+                            <li>Cafeteira</li>
+                            <li>Torradeira</li>
+                            <li>Máquina de lavar loiça</li>
+                            <li>Máquina de lavar roupa</li>
+                            <li>Frigorífico</li>
+                            <li>Congelador</li>
+                            <li>Fogão eléctrico/gás</li>
+                            <li>Placa de cozinha</li>
+                            <li>Cafeteira eléctrica</li>
+                            <li>Ferro de engomar</li>
+                        </ul>
+                        <h5>Exterior</h5>
+                        <ul>
+                            <li>Estacionamento individual</li>
+                            <li>Churrasco</li>
+                            <li>Ténis colectivo</li>
+                        </ul>
+                        <h5>Outro</h5>
+                        <ul>
+                            <li>Ar condicionado</li>
+                            <li>Lareira</li>
+                            <li>Berço</li>
+                            <li>Cadeira de bébé</li>
+                            <li>banheira</li>
+                            <li>duche</li>
+                            <li>Espreguiçadeira</li>
+                            <li>Alarme</li>
+                            <li>Caixa-forte</li>
+                            <li>Bilhar</li>
+                            <li>Matraquilhos</li>
+                        </ul>
+                        <h5>Serviços complementares</h5>
+                        <ul>
+                            <li>Lençóis fornecidos</li>
+                            <li>Toalhas fornecidas</li>
+                            <li>Limpeza incluída</li>
+                            <li>Acesso deficientes</li>
+                        </ul>
+                        
+                    </div>
+                </div>    
+            </div>
+            <div class="column">
+                <div class="content-wrapper1">
+                    <img id=featured1 alt="v4_green" src="imagens/v4_green/piscina.jpg">
+                    <div id="slide-wrapper1">
+                        
+                        <img id="slideLeft1" class="arrow1" alt="seta" src="arrow-left.png">
+                        <div id="slider1">
+                            
+                            <img class="thumbnail1 active1" alt="v4_green" src="imagens/v4_green/piscina.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/piscina2.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/cozinha.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/garagem.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/casa_de_banho.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/quarto1.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/quarto2.jpg">
+                            <img class="thumbnail" alt="v4_green" src="imagens/tenis.jpg">
+
+                        </div>
+                        <img id="slideRight1" class="arrow1" alt="seta" src="arrow-right.png">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+       
+        
+        <div section id="mapa"></div>
+        
+            
+        
+
+    <!----------------1ºslider e 2ºslider----------->
+    <script>
+		let thumbnails = document.getElementsByClassName('thumbnail')
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+        })
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+    /*----------------2ºslider--------- */
+        let thumbnails1 = document.getElementsByClassName('thumbnail1')
+		let activeImages1 = document.getElementsByClassName('active1')
+
+		for (var i=0; i < thumbnails1.length; i++){
+
+			thumbnails1[i].addEventListener('mouseover', function(){
+				console.log(activeImages1)
+				
+				if (activeImages1.length > 0){
+					activeImages1[0].classList.remove('active')
+				}
+				
+				this.classList.add('active1')
+				document.getElementById('featured1').src = this.src
+			})
+		}
+
+		let buttonRight1 = document.getElementById('slideRight1');
+		let buttonLeft1 = document.getElementById('slideLeft1');
+
+		buttonLeft1.addEventListener('click', function(){
+			document.getElementById('slider1').scrollLeft -= 180
+        })
+
+		buttonRight1.addEventListener('click', function(){
+			document.getElementById('slider1').scrollLeft += 180
+		})
+    </script>
+
+    <!----------------mapa----------->
+    <script src="mapa/Leaflet.EdgeMarker.js"></script>
+    <script>
+        //mapa e tiles
+        var map = L.map('mapa').setView([37.077431359509724, -8.08266771575456], 15);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy OSM'}).addTo(map);
+        //botão reset
+        L.control.resetView({position: "topleft",title: "Reset view",latlng: L.latLng([37.077431359509724, -8.08266771575456]),zoom: 15,}).addTo(map);
+        //markers icons
+        var mIcon = L.Icon.extend({ options: {iconSize: [30, 30],iconAnchor: [13, 13], popupAnchor: [0, -10]}});
+
+        var homeIcon = new mIcon({iconUrl: './mapa/icon-home.png'});
+        var casinoIcon = new mIcon({iconUrl: './mapa/icon-casino.png'});
+        var discoIcon = new mIcon({iconUrl: './mapa/icon-disco.png'});
+        var golfIcon = new mIcon({iconUrl: './mapa/icon-golf.png'});
+        var marinaIcon = new mIcon({iconUrl: './mapa/icon-marina.png'});
+        var aquaIcon = new mIcon({iconUrl: './mapa/icon-aqua.png'});
+        var praiaIcon = new mIcon({iconUrl: './mapa/icon-beach.png'});
+        var superIcon = new mIcon({iconUrl: './mapa/icon-super.png'});
+
+        //markers 
+        var markervivendas = L.marker([37.077431359509724, -8.08266771575456],{icon: homeIcon}).addTo(map).bindPopup("<b>Vivendas Costa</b><br>"+ '<a href="https://www.google.com/maps/dir//Vivendas+Costa,+Quarteira/@37.0773919,-8.0826557,56m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0xd1ab52d153f506d:0x3958f1601821b693!2m2!1d-8.0826829!2d37.0774151!3e0" target="_blank">Google Maps</a>');
+        var markerCasino = L.marker([37.07355799832836, -8.115873461533367],{icon: casinoIcon}).addTo(map).bindPopup("Casino Vilamoura");
+        var markerDisco = L.marker([37.07902271287849, -8.11794130001111],{icon: discoIcon}).addTo(map).bindPopup("Discoteca Seven Vilamoura");
+        var markerGolf = L.marker([37.08377565424099, -8.08465642010216],{icon: golfIcon}).addTo(map).bindPopup("Golf Vila Sol");
+        var markerMarina = L.marker([37.07644881386153, -8.119069162193327],{icon: marinaIcon}).addTo(map).bindPopup("Marina Vilamoura");
+        var markerAqua = L.marker([37.09281096222891, -8.072279990198469],{icon: aquaIcon}).addTo(map).bindPopup("Aquashow");
+        var markerQuart = L.marker([37.06626166372775, -8.101668954320283],{icon: praiaIcon}).addTo(map).bindPopup("Praia de Quarteira");
+        var markerVila = L.marker([37.07187744322424, -8.116517663780419],{icon: praiaIcon}).addTo(map).bindPopup("Praia de Vilamoura");
+        var markerAlma = L.marker([37.05876189519406, -8.083387017239309],{icon: praiaIcon}).addTo(map).bindPopup("Praia do Almargem");
+        var markerLidl = L.marker([37.07398636125109, -8.078992053012364],{icon: superIcon}).addTo(map).bindPopup("LIDL");
+        var markerContinente = L.marker([37.07485092492367, -8.095305248327964],{icon: superIcon}).addTo(map).bindPopup("Continente");
+        var markerPingo = L.marker([37.07764142929946, -8.094167991678562],{icon: superIcon}).addTo(map).bindPopup("Pingo Doce");
+        //edge marker
+        var edgeMarkerLayer = L.edgeMarker({findEdge : function(map){return L.bounds([200,0],map.getSize());},
+        icon: L.icon({ iconUrl: 'mapa/icon-arrow.png', clickable: true, iconSize: [40, 40],iconAnchor: [24, 24]}), rotateIcons: true, layerGroup: null}).addTo(map);
+        //remover edge markers
+        //edgeMarkerLayer.destroy();
+
+    </script>
+    
+
+    <div id="footer"></div>
+</main>
+
+</html>
