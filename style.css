@@ -35,7 +35,6 @@ a:visited {
     height: 100%;
     display: table;
     float: left;
-    
 }
 .logo_container h1{
     color: white;
@@ -163,13 +162,39 @@ footer ul li a{
 .descrição_home{
     text-align: center;
     word-break:normal;
-    text-justify: auto;
+    text-justify:newspaper;
 }
 /*---home imagens/texto---*/
 
 /*contactos form*/
+.columncontact{
+    background-color: #dad2d2;
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+.columncontact img {
+    max-width: 100%;
+    height: 95%; 
+    object-fit: contain;
+    position: static;
+}
+.columncontact .h2 {
+    text-align: center;
+    text-align: justify;
+}
+.columncontact .p {
+    text-align: center;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
 .container_email{
     height: 80%;
+    width: 100%;
     display: flex;
     float: left;
     align-items: center;
@@ -182,6 +207,7 @@ form{
     width: 90%;
     max-width: 600px;
     border-radius: 10px;
+    height: 100%;
 }
 form h3{
     color: #555;
@@ -195,7 +221,7 @@ form input, form textarea{
     outline: none;
     background: #f5f5f5;
     font-size: 16px;
-    width: 500px;
+    width: 90%;
 }
 form button{
     padding: 15px;
@@ -210,7 +236,7 @@ form button{
     border-radius: 30px;
 }
 input[type="date"]{
-    width: 130px;
+    width: 300px;
     display: flex;
 }
 /*---contactos form---*/
@@ -220,21 +246,27 @@ input[type="date"]{
     font-size: 20px;
     text-align: center;
     margin-bottom: 47%;
+    max-width: 100%;
+    max-height: 100%;
 }
-/*contactos texto*/
+/*---contactos texto---*/
 
 /*slider info thumbnail*/
 #featured{
-    max-width: 700px;
-    max-height: 750px;
-    object-fit:cover;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
     cursor: pointer;
     border: 2px solid black;
-    
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 500px;
 }
 .thumbnail{
     object-fit: cover;
-    max-width: 20px;
+    max-width: 200px;
     max-height: 120px;
     cursor: pointer;
     opacity: 0.5;
@@ -250,53 +282,59 @@ input[type="date"]{
 #slide-wrapper{
 	max-width: fit-content;
 	display: flex;
-	min-height: 100px;
+    min-height: 100px;
 	align-items: center;
+    
 }
 #slider{
 	max-width: 700px;
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
-
 }
 .arrow{
-	width: 30px;
-	height: 30px;
+	width: 4%;
+	height: 4%;
 	cursor: pointer;
 	transition: .3s;
 }
 .arrow:hover{
 	opacity: .5;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 }
 #slider::-webkit-scrollbar {
     width: 8px;
 
 }
 #content-wrapper{
-    
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-    
+    max-width: 100%;
+    height: 95%; 
+    object-fit: contain;
 }
 /*---slider thumbnail---*/
 
 /*slider1 info thumbnail*/
 #featured1{
-    max-width: 700px;
-    max-height: 750px;
-    object-fit:cover;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
     cursor: pointer;
     border: 2px solid black;
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 500px;
     
 }
 .thumbnail1{
     object-fit: cover;
-    max-width: 20px;
+    max-width: 200px;
     max-height: 120px;
     cursor: pointer;
     opacity: 0.5;
@@ -320,18 +358,17 @@ input[type="date"]{
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
-
 }
 .arrow1{
-	width: 30px;
-	height: 30px;
+	width: 4%;
+	height: 4%;
 	cursor: pointer;
 	transition: .3s;
 }
 .arrow1:hover{
 	opacity: .5;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 }
 #slider1::-webkit-scrollbar {
     width: 8px;
@@ -342,31 +379,205 @@ input[type="date"]{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+    max-width: 100%;
+    height: 95%; 
+    object-fit: contain;
 }
 /*---slider1 thumbnail---*/
+.columnslider{
+    background-color: #dad2d2;
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+.columninfo{
+    background-color: #dad2d2;
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+.columnslider1{
+    background-color: #dad2d2;
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
 
 /*info texto*/
 .descriçãoRed{
+    max-width: 90%;
+    max-height: 100%;
     column-count: 3;
     list-style: inside disc;
-    font-size: smaller;
+    font-size: 1vw;
     margin-top: 5%;
 }
 .descriçãoGreen{
+    max-width: 90%;
+    max-height: 100%;
     column-count: 3;
     list-style: inside disc;
-    font-size: small;
+    font-size: 1vw;
     margin-top: 5%;
 }
 .titulo{
     margin-left: 5%;
+    font-size: 1vw;
 }
 /*---info texto---*/
-
-
-
-
 
 /* mapa */
 #mapa { height: 500px;}
 /*---mapa---*/
+
+@media screen and (max-width:920px){
+    /* header */
+    .header{
+        height: 50px;
+    }
+    .logo_container h1{
+        font-size: 16px;
+    }
+    .navigation a li{
+        font-size: 12px;
+    }
+    /* home */
+    .container{
+        height: 30vh;
+        max-width: fit-content;
+    }
+    .column{
+        clear: both;
+        height: 25vh;
+        width: 100%;
+        float: none;
+    }
+    .column .img {
+        order: 2;
+        height: 100%;
+    }
+    .column .descrição_home{
+        order:1;
+        width: 100%;        
+    }
+   
+    /* contactos */
+    .columncontact{
+        clear: both;
+        height: 50%;
+        width: 100%;
+    }
+    .form{
+        height: 25vh;
+        width: 30%;
+    }
+    form input, form textarea{
+        border: 0;
+        margin: 5px 0;
+        padding: 10px;
+        outline: none;
+        background: #f5f5f5;
+        font-size: 10px;
+        width: 90%;
+    }
+    form button{
+        padding: 7px;
+        font-size: 9px;
+        width: 75px;
+        margin: 20px auto 0;
+        border-radius: 15px;
+    }
+    form h3{
+        color: #555;
+        font-weight: 400;
+        margin-bottom: 0px;
+        font-size: medium;
+    }
+    .contactosinfo{
+        font-size: 15px;
+        max-width: 50%;
+        max-height: 50%;
+        align-items: flex-end;
+        margin-bottom: 10%;
+    }
+    /* info */
+    .columnslider{
+        order: 1;
+        height: 40vh;
+        width: 100%;
+    }
+    .columnslider1{
+        order: 1;
+        height: 50vh;
+        width: 100%;
+    }
+    #featured{
+        width: 50%;
+        height: 50%;
+        max-height: 500px;
+    }
+    .thumbnail{
+        max-width: 150px;
+        max-height: 70px;
+    }
+    #slider{
+        max-width: 350px;
+    }
+    #slide-wrapper{
+        justify-content: center;
+    }
+    .columninfo{
+        order: 2;
+        height: 50vh;
+        width: 100%;
+        align-content: center;
+    }
+    .descriçãoRed{
+        max-width: 80%;
+        max-height: 100%;
+        column-count: 3;
+        list-style: inside disc;
+        font-size: 2vw;
+        margin-top: 0%;
+        align-items: center;
+    }
+    .descriçãoRed h5{
+        font-size:2vw;
+    }
+    .descriçãoGreen{
+        max-width: 80%;
+        max-height: 100%;
+        column-count: 3;
+        list-style: inside disc;
+        font-size: 2vw;
+        margin-top: 0%;
+    }
+    .descriçãoGreen h5{
+        font-size:2vw;
+    }
+    #featured1{
+        width: 50%;
+        height: 50%;
+        max-height: 500px;
+    }
+    .thumbnail1{
+        max-width: 150px;
+        max-height: 70px;
+    }
+    #slider1{
+        max-width: 350px;
+    }
+    #slide-wrapper1{
+        justify-content: center;
+    }
+    #mapa { height: 300px;}
+}
