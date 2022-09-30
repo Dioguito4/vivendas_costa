@@ -19,6 +19,8 @@
         <!--link e script para mapa-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+        <link rel="stylesheet" href="css/leaflet-gesture-handling.min.css" type="text/css">
+        
         <!--botao reset-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
         <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
@@ -236,7 +238,7 @@
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/casa_de_banho.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/quarto1.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/quarto2.jpg">
-                            <img class="thumbnail" alt="v4_green" src="imagens/tenis.jpg">
+                            <img class="thumbnail1" alt="v4_green" src="imagens/tenis.jpg">
 
                         </div>
                         <img id="slideRight1" class="arrow1" alt="seta" src="arrow-right.png">
@@ -314,9 +316,10 @@
 
     <!----------------mapa----------->
     <script src="mapa/Leaflet.EdgeMarker.js"></script>
+    <script src="mapa/leaflet-gesture-handling.js"></script>
     <script>
         //mapa e tiles
-        var map = L.map('mapa').setView([37.077431359509724, -8.08266771575456], 15);
+        var map = L.map('mapa',{gestureHandling: true}).setView([37.077431359509724, -8.08266771575456], 15);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy OSM'}).addTo(map);
         //botão reset
         L.control.resetView({position: "topleft",title: "Reset view",latlng: L.latLng([37.077431359509724, -8.08266771575456]),zoom: 15,}).addTo(map);
@@ -347,9 +350,10 @@
         var markerPingo = L.marker([37.07764142929946, -8.094167991678562],{icon: superIcon}).addTo(map).bindPopup("Pingo Doce");
         //edge marker
         var edgeMarkerLayer = L.edgeMarker({findEdge : function(map){return L.bounds([200,0],map.getSize());},
-        icon: L.icon({ iconUrl: 'mapa/icon-arrow.png', clickable: true, iconSize: [40, 40],iconAnchor: [24, 24]}), rotateIcons: true, layerGroup: null}).addTo(map);
+            icon: L.icon({ iconUrl: 'mapa/icon-arrow.png', clickable: true, iconSize: [40, 40],iconAnchor: [24, 24]}), rotateIcons: true, layerGroup: null}).addTo(map);
         //remover edge markers
         //edgeMarkerLayer.destroy();
+        
 
     </script>
     
