@@ -119,6 +119,7 @@ footer ul li a{
 }
 .swiper-slide img{
     width: 100%;
+    max-height:  120vh;
 }
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
     color: #fff;
