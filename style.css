@@ -33,6 +33,7 @@ a:visited {
     height: 100%;
     display: table;
     float: left;
+    margin-left: 30px;
 }
 
 .logo_container h1{
@@ -88,8 +89,6 @@ a:visited {
   .goog-te-menu-value {
     color: #fff !important;
 }
-
-  
   .goog-te-gadget-icon {
     display: none;
 }
@@ -157,7 +156,6 @@ footer ul li a{
 
 /*home imagens/texto*/
 .column{
-    background-color: #dad2d2;
     height: 80vh;
     width: 50%;
     display: flex;
@@ -190,12 +188,12 @@ footer ul li a{
     text-align: center;
     word-break:normal;
     text-justify:newspaper;
+    padding: 27px;
 }
 /*---home imagens/texto---*/
 
 /*contactos form*/
 .columncontact{
-    background-color: #dad2d2;
     height: 80vh;
     width: 50%;
     display: flex;
@@ -282,7 +280,6 @@ input[type="date"]{
 #featured{
     object-fit: cover;
     cursor: pointer;
-    border: 2px solid black;
     position: static;
     display: block;
     margin-left: auto;
@@ -297,7 +294,6 @@ input[type="date"]{
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
-    border: 2px solid black;
 }
 .thumbnail:hover{
     opacity: 1;
@@ -341,7 +337,6 @@ input[type="date"]{
     width: 100%;
 }
 .columnslider{
-    background-color: #dad2d2;
     height: 100vh;
     width: 50%;
     display: flex;
@@ -355,7 +350,6 @@ input[type="date"]{
 #featured1{
     object-fit: cover;
     cursor: pointer;
-    border: 2px solid black;
     position: static;
     display: block;
     margin-left: auto;
@@ -370,7 +364,6 @@ input[type="date"]{
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
-    border: 2px solid black;
 }
 .thumbnail1:hover{
     opacity: 1;
@@ -415,7 +408,6 @@ input[type="date"]{
     object-fit: contain;
 }
 .columnslider1{
-    background-color: #dad2d2;
     height: 100vh;
     width: 50%;
     display: flex;
@@ -426,7 +418,6 @@ input[type="date"]{
 /*---slider1 thumbnail---*/
 
 .columninfo{
-    background-color: #dad2d2;
     height: 100vh;
     width: 50%;
     display: flex;
@@ -435,7 +426,6 @@ input[type="date"]{
     justify-content: center;
 }
 .titulo{
-    background-color: #dad2d2;
     height: 100%;
     width: 100%;
     display: block;
@@ -620,5 +610,13 @@ input[type="date"]{
     #mapa { 
         height: 300px;
         max-width:920px;
+    }
+    .goog-te-gadget-simple  {
+        padding: 1px!important;
+        border-radius: 1px!important;
+        cursor: pointer;
+    }
+    .goog-te-gadget {
+        font-size: 1px;
     }
 }
