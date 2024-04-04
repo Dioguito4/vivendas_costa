@@ -20,7 +20,10 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
         <link rel="stylesheet" href="css/leaflet-gesture-handling.min.css" type="text/css">
-        
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Tauri&display=swap" rel="stylesheet">
         <!--botao reset-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.css">
         <script src="https://cdn.jsdelivr.net/npm/@drustack/leaflet.resetview/dist/L.Control.ResetView.min.js"></script>
@@ -38,17 +41,14 @@
 
     <main>
         <div id="header"></div>
-
-        <div class=row>
-            <section id="info_v4red"></section>
+        <section id="info_v4red"></section>
+        <div class=row style="background-color: #dad2d2;">
             <div class="columnslider">
                 <div class="content-wrapper">
                     <img id=featured alt="v4_red" src="imagens/v4_red/piscina1.jpg">
                     <div id="slide-wrapper">
-                        
                         <img id="slideLeft" class="arrow" alt="seta" src="arrow-left.png">
                         <div id="slider">
-                            
                             <img class="thumbnail active" alt="v4_red" src="imagens/v4_red/piscina1.jpg">
                             <img class="thumbnail" alt="v4_red" src="imagens/v4_red/piscina2.jpg">
                             <img class="thumbnail" alt="v4_red" src="imagens/tenis2.jpg">
@@ -62,47 +62,147 @@
                             <img class="thumbnail" alt="v4_red" src="imagens/v4_red/banho.jpg">
                             <img class="thumbnail" alt="v4_red" src="imagens/v4_red/banho2.jpg">
                             <img class="thumbnail" alt="v4_red" src="imagens/v4_red/banho3.jpg">
-                            
                         </div>
                         <img id="slideRight" class="arrow" alt="seta" src="arrow-right.png">
-                        
                     </div>
                 </div>
             </div>
             <div class="columninfo">
-                <div class="titulo"><h2 style="font-size:2vw";>Vivenda V4 RED</h2>
-                    <div class="descriçãoRed">
-                    
-                            <h5>Composição do alojamento</h5>
-                            <ul> 
+                <div class="titulo"><h2>Vivenda V4 RED</h2>
+                        <div class="descricao">
+                            <div class="row1">
+                                <button class="btninfo" onclick="showText(0)"><h6>Composição</h6></button>
+                                <button class="btninfo" onclick="showText(1)"><h6>Piscina</h6></button>
+                                <button class="btninfo" onclick="showText(2)"><h6>Eletrodoméstico</h6></button>
+                                <button class="btninfo" onclick="showText(3)"><h6>Serviços complementares</h6></button>
+                                <button class="btninfo" onclick="showText(4)"><h6>Outros</h6></button>
+                            </div>
+                            <div class="content" id="content-0" style="display: block;">
+                            
+                                <ul>
+                                    <li>Varanda<br></li>
+                                    <li>4 quartos com 1 Cama de casal, 1 Cama individual<br></li>
+                                    <li>Pátio<br></li>
+                                    <li>Cozinha independente<br></li>
+                                    <li>3 Duches<br></li>
+                                    <li>1 Banheira<br></li>
+                                    <li>Sala<br></li>
+                                    <li>Casa de banho<br></li>
+                                    <li>Sala de estar com 1 Sofá cama<br></li>
+                                    <li>Terraço<br></li>
+                                    <li>Terraço coberto<br></li>
+                                </ul>
+                            
+                            </div>
+                            <div class="content" id="content-1" style="display: none;">
+                            <p>
+                                <ul>
+                                    <li>Piscina privada <br></li>
+                                    <li>Tipo de piscina : Enterrada no solo<br></li>
+                                    <li>Forma da piscina : Rectangular<br></li>
+                                    <li>Dimensão da piscina : 10mX5m<br></li>
+                                    <li>Profundidade: Mínimo: 1m, Máximo: 2.2m<br></li>
+                                </ul>
+                            </p>
+                            </div>
+                            <div class="content" id="content-2" style="display: none;">
+                            <p>
+                                <ul>
+                                    <li>Forno micro ondas<br></li>
+                                    <li>Forno<br></li>
+                                    <li>Cafeteira<br></li>
+                                    <li>Torradeira<br></li>
+                                    <li>Máquina de lavar loiça<br></li>
+                                    <li>Máquina de lavar roupa<br></li>
+                                    <li>Frigorífico<br></li>
+                                    <li>Congelador<br></li>
+                                    <li>Fogão eléctrico/gás<br></li>
+                                    <li>Placa de cozinha<br></li>
+                                    <li>Cafeteira eléctrica<br></li>
+                                    <li>Ferro de engomar<br></li>
+                                </ul>
+                            </p>
+                            </div>
+                            <div class="content" id="content-3" style="display: none;">
+                            <p>
+                                <ul>
+                                    <li>Lençóis fornecidos<br></li>
+                                    <li>Toalhas fornecidas<br></li>
+                                    <li>Limpeza incluída<br></li>
+                                    <li>Acesso deficientes<br></li>
+                                </ul>
+                            </p>
+                            </div>
+                            <div class="content" id="content-4" style="display: none;">
+                            <p>
+                                <ul>
+                                    <li>Ar condicionado<br></li>
+                                    <li>Lareira<br></li>
+                                    <li>Berço<br></li>
+                                    <li>Cadeira de bébé<br></li>
+                                    <li>banheira<br></li>
+                                    <li>duche<br></li>
+                                    <li>Espreguiçadeira<br></li>
+                                    <li>Alarme<br></li>
+                                    <li>Caixa-forte<br></li>
+                                    <li>Bilhar<br></li>
+                                    <li>Matraquilhos<br></li>
+                                    <li>Estacionamento individual<br></li>
+                                    <li>Churrasco<br></li>
+                                    <li>Ténis colectivo<br></li>
+                                    <li>TV<br></li>
+                                    <li>Acesso internet<br></li>
+                                    <li>Wi-fi grátis (Wi-fi interior)<br></li>
+                                </ul>
+                            </p>
+                            </div>
+                        </div>
+                </div>    
+            </div>        
+        </div>
+        <section id="info_v4green"></section>
+        <div class=row style="background-color: #dad2d2;">
+            <div class="columninfo1">
+                <div class="titulo"><h2>Vivenda V4 GREEN</h2>
+                    <div class="descricao1">
+                        <div class="row1">
+                            <button class="btninfo" onclick="showText1(0)"><h6>Composição</h6></button>
+                            <button class="btninfo" onclick="showText1(1)"><h6>Piscina</h6></button>
+                            <button class="btninfo" onclick="showText1(2)"><h6>Eletrodoméstico</h6></button>
+                            <button class="btninfo" onclick="showText1(3)"><h6>Serviços complementares</h6></button>
+                            <button class="btninfo" onclick="showText1(4)"><h6>Outros</h6></button>
+                        </div>
+                        <div class="content1" id="content1-0" style="display: block;">
+                       
+                            <ul>
                                 <li>Varanda</li>
-				<li>2 quartos com 1 Cama de casal, 1 Cama individual</li>
-                            	<li>2 quartos com 1 Cama de casal</li>
+                                <li>2 quartos com 1 Cama de casal, 1 Cama individual</li>
+                                <li>2 quartos com 1 Cama de casal</li>
                                 <li>Pátio</li>
                                 <li>Cozinha independente</li>
                                 <li>2 Duches</li>
-                                <li>1 Banheira</li>
+                                <li>1 banheira</li>
                                 <li>Sala</li>
                                 <li>Casa de banho</li>
                                 <li>Sala de estar com 1 Sofá cama</li>
                                 <li>Terraço</li>
                                 <li>Terraço coberto</li>
                             </ul>
-                            <h5 style="font-size:1.5vw";>Características  da piscina</h5>
+                        
+                        </div>
+                        <div class="content1" id="content1-1" style="display: none;">
+                        <p>
                             <ul>
                                 <li>Piscina privada </li>
                                 <li>Tipo de piscina : Enterrada no solo</li>
-                                <li>Forma da piscina : Rectangular</li>
-                                <li>Dimensão da piscina : 10mX5m</li>
+                                <li>Forma da piscina : Formato 8</li>
+                                <li>Dimensão da piscina : 12mX6m</li>
                                 <li>Profundidade: Mínimo: 1m, Máximo: 2.2m</li>
                             </ul>
-                            <h5 style="font-size:1.5vw";>Multimédia</h5>
-                            <ul>
-                                <li>TV</li>
-                                <li>Acesso internet</li>
-                                <li>Wi-fi grátis (Wi-fi interior)</li>
-                            </ul>
-                            <h5 style="font-size:1.5vw";>Eletrodoméstico</h5>
+                        </p>
+                        </div>
+                        <div class="content1" id="content1-2" style="display: none;">
+                        <p>
                             <ul>
                                 <li>Forno micro ondas</li>
                                 <li>Forno</li>
@@ -117,15 +217,21 @@
                                 <li>Cafeteira eléctrica</li>
                                 <li>Ferro de engomar</li>
                             </ul>
-                            <h5 style="font-size:1.5vw";>Exterior</h5>
+                        </p>
+                        </div>
+                        <div class="content1" id="content1-3" style="display: none;">
+                        <p>
                             <ul>
-                                <li>Estacionamento individual</li>
-                                <li>Churrasco</li>
-                                <li>Ténis colectivo</li>
+                                <li>Lençóis fornecidos</li>
+                                <li>Toalhas fornecidas</li>
+                                <li>Limpeza incluída</li>
+                                <li>Acesso deficientes</li>
                             </ul>
-                            <h5 style="font-size:1.5vw";>Outro</h5>
+                        </p>
+                        </div>
+                        <div class="content1" id="content1-4" style="display: none;">
+                        <p>
                             <ul>
-                                <li>Ar condicionado</li>
                                 <li>Lareira</li>
                                 <li>Berço</li>
                                 <li>Cadeira de bébé</li>
@@ -136,96 +242,15 @@
                                 <li>Caixa-forte</li>
                                 <li>Bilhar</li>
                                 <li>Matraquilhos</li>
+                                <li>Estacionamento individual</li>
+                                <li>Churrasco</li>
+                                <li>Ténis colectivo</li>
+                                <li>TV</li>
+                                <li>Acesso internet</li>
+                                <li>Wi-fi grátis (Wi-fi interior)</li>
                             </ul>
-                            <h5 style="font-size:1.5vw";>Serviços complementares</h5>
-                            <ul>
-                                <li>Lençóis fornecidos</li>
-                                <li>Toalhas fornecidas</li>
-                                <li>Limpeza incluída</li>
-                                <li>Acesso deficientes</li>
-                            </ul>
-                    
-                    </div>
-                </div>    
-            </div>        
-        </div>
-        <div class=row>
-            <section id="info_v4green"></section>
-            <div class="columninfo">
-                <div class="titulo"><h2 style="font-size:2vw">Vivenda V4 GREEN</h2>
-                    <div class="descriçãoGreen">
-                        
-                        <h5>Composição do alojamento</h5>
-                        <ul> 
-                            <li>Varanda</li>
-                        <li>4 quartos com 1 Cama de casal, 1 Cama individual</li>
-                            <li>Pátio</li>
-                            <li>Cozinha independente</li>
-                            <li>3 Duches</li>
-                            <li>1 banheira</li>
-                            <li>Sala</li>
-                            <li>Casa de banho</li>
-                            <li>Sala de estar com 1 Sofá cama</li>
-                            <li>Terraço</li>
-                            <li>Terraço coberto</li>
-                        </ul>
-                        <h5>Características da piscina</h5>
-                        <ul>
-                            <li>Piscina privada </li>
-                            <li>Tipo de piscina : Enterrada no solo</li>
-                            <li>Forma da piscina : Formato 8</li>
-                            <li>Dimensão da piscina : 12mX6m</li>
-                            <li>Profundidade: Mínimo: 1m, Máximo: 2.2m</li>
-                        </ul>
-                        <h5>Multimédia</h5>
-                        <ul>
-                            <li>TV</li>
-                            <li>Acesso internet</li>
-                            <li>Wi-fi grátis (Wi-fi interior)</li>
-                        </ul>
-                        <h5>Eletrodoméstico</h5>
-                        <ul>
-                            <li>Forno micro ondas</li>
-                            <li>Forno</li>
-                            <li>Cafeteira</li>
-                            <li>Torradeira</li>
-                            <li>Máquina de lavar loiça</li>
-                            <li>Máquina de lavar roupa</li>
-                            <li>Frigorífico</li>
-                            <li>Congelador</li>
-                            <li>Fogão eléctrico/gás</li>
-                            <li>Placa de cozinha</li>
-                            <li>Cafeteira eléctrica</li>
-                            <li>Ferro de engomar</li>
-                        </ul>
-                        <h5>Exterior</h5>
-                        <ul>
-                            <li>Estacionamento individual</li>
-                            <li>Churrasco</li>
-                            <li>Ténis colectivo</li>
-                        </ul>
-                        <h5>Outro</h5>
-                        <ul>
-                            <li>Ar condicionado</li>
-                            <li>Lareira</li>
-                            <li>Berço</li>
-                            <li>Cadeira de bébé</li>
-                            <li>banheira</li>
-                            <li>duche</li>
-                            <li>Espreguiçadeira</li>
-                            <li>Alarme</li>
-                            <li>Caixa-forte</li>
-                            <li>Bilhar</li>
-                            <li>Matraquilhos</li>
-                        </ul>
-                        <h5>Serviços complementares</h5>
-                        <ul>
-                            <li>Lençóis fornecidos</li>
-                            <li>Toalhas fornecidas</li>
-                            <li>Limpeza incluída</li>
-                            <li>Acesso deficientes</li>
-                        </ul>
-                        
+                        </p>
+                        </div>
                     </div>
                 </div>    
             </div>
@@ -233,10 +258,8 @@
                 <div class="content-wrapper1">
                     <img id=featured1 alt="v4_green" src="imagens/v4_green/piscina.jpg">
                     <div id="slide-wrapper1">
-                        
                         <img id="slideLeft1" class="arrow1" alt="seta" src="arrow-left.png">
                         <div id="slider1">
-                            
                             <img class="thumbnail1 active1" alt="v4_green" src="imagens/v4_green/piscina.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/piscina2.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/piscina3.jpg">
@@ -253,11 +276,8 @@
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/banho2.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/banho3.jpg">
                             <img class="thumbnail1" alt="v4_green" src="imagens/v4_green/banho4.jpg">
-                            
-
                         </div>
                         <img id="slideRight1" class="arrow1" alt="seta" src="arrow-right.png">
-                        
                     </div>
                 </div>
             </div>
@@ -272,63 +292,132 @@
 
     <!----------------1ºslider e 2ºslider----------->
     <script>
-		let thumbnails = document.getElementsByClassName('thumbnail')
-		let activeImages = document.getElementsByClassName('active')
+		let thumbnails = document.getElementsByClassName('thumbnail');
+        let activeImages = document.getElementsByClassName('active');
 
-		for (var i=0; i < thumbnails.length; i++){
+        for (var i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].addEventListener('mouseover', function () {
+                if (activeImages.length > 0) {
+                    activeImages[0].classList.remove('active');
+                }
+                this.classList.add('active');
+                document.getElementById('featured').src = this.src;
+            });
+        }
 
-			thumbnails[i].addEventListener('mouseover', function(){
-				console.log(activeImages)
-				
-				if (activeImages.length > 0){
-					activeImages[0].classList.remove('active')
-				}
-				
-				this.classList.add('active')
-				document.getElementById('featured').src = this.src
-			})
-		}
+        let buttonRight = document.getElementById('slideRight');
+        let buttonLeft = document.getElementById('slideLeft');
 
-		let buttonRight = document.getElementById('slideRight');
-		let buttonLeft = document.getElementById('slideLeft');
+        buttonLeft.addEventListener('click', function () {
+            document.getElementById('slider').scrollLeft -= 180;
 
-		buttonLeft.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft -= 180
-        })
+            let currentActiveIndex;
+            for (let i = 0; i < thumbnails.length; i++) {
+                if (thumbnails[i].classList.contains('active')) {
+                    currentActiveIndex = i;
+                    break;
+                }
+            }
 
-		buttonRight.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft += 180
-		})
+            if (currentActiveIndex > 0) {
+                thumbnails[currentActiveIndex].classList.remove('active');
+                thumbnails[currentActiveIndex - 1].classList.add('active');
+                document.getElementById('featured').src = thumbnails[currentActiveIndex - 1].src;
+            }
+        });
+
+        buttonRight.addEventListener('click', function () {
+            document.getElementById('slider').scrollLeft += 180;
+
+            let currentActiveIndex;
+            for (let i = 0; i < thumbnails.length; i++) {
+                if (thumbnails[i].classList.contains('active')) {
+                    currentActiveIndex = i;
+                    break;
+                }
+            }
+
+            if (currentActiveIndex < thumbnails.length - 1) {
+                thumbnails[currentActiveIndex].classList.remove('active');
+                thumbnails[currentActiveIndex + 1].classList.add('active');
+                document.getElementById('featured').src = thumbnails[currentActiveIndex + 1].src;
+            }
+        });
     /*----------------2ºslider--------- */
-        let thumbnails1 = document.getElementsByClassName('thumbnail1')
-		let activeImages1 = document.getElementsByClassName('active1')
+    let thumbnails1 = document.getElementsByClassName('thumbnail1');
+        let activeImages1 = document.getElementsByClassName('active1');
 
-		for (var i=0; i < thumbnails1.length; i++){
+        for (var i = 0; i < thumbnails1.length; i++) {
+            thumbnails1[i].addEventListener('mouseover', function () {
+                if (activeImages1.length > 0) {
+                    activeImages1[0].classList.remove('active1');
+                }
+                this.classList.add('active1');
+                document.getElementById('featured1').src = this.src;
+            });
+        }
 
-			thumbnails1[i].addEventListener('mouseover', function(){
-				console.log(activeImages1)
-				
-				if (activeImages1.length > 0){
-					activeImages1[0].classList.remove('active')
-				}
-				
-				this.classList.add('active1')
-				document.getElementById('featured1').src = this.src
-			})
-		}
+        let buttonRight1 = document.getElementById('slideRight1');
+        let buttonLeft1 = document.getElementById('slideLeft1');
 
-		let buttonRight1 = document.getElementById('slideRight1');
-		let buttonLeft1 = document.getElementById('slideLeft1');
+        buttonLeft1.addEventListener('click', function () {
+            document.getElementById('slider1').scrollLeft -= 180;
 
-		buttonLeft1.addEventListener('click', function(){
-			document.getElementById('slider1').scrollLeft -= 180
-        })
+            let currentActiveIndex1;
+            for (let i = 0; i < thumbnails1.length; i++) {
+                if (thumbnails[i].classList.contains('active1')) {
+                    currentActiveIndex1 = i;
+                    break;
+                }
+            }
 
-		buttonRight1.addEventListener('click', function(){
-			document.getElementById('slider1').scrollLeft += 180
-		})
+            if (currentActiveIndex1 > 0) {
+                thumbnails1[currentActiveIndex1].classList.remove('active1');
+                thumbnails1[currentActiveIndex1 - 1].classList.add('active1');
+                document.getElementById('featured1').src = thumbnails1[currentActiveIndex1 - 1].src;
+            }
+        });
+
+        buttonRight1.addEventListener('click', function () {
+            document.getElementById('slider1').scrollLeft += 180;
+
+            let currentActiveIndex1;
+            for (let i = 0; i < thumbnails1.length; i++) {
+                if (thumbnails1[i].classList.contains('active1')) {
+                    currentActiveIndex1 = i;
+                    break;
+                }
+            }
+
+            if (currentActiveIndex1 < thumbnails1.length - 1) {
+                thumbnails1[currentActiveIndex1].classList.remove('active1');
+                thumbnails1[currentActiveIndex1 + 1].classList.add('active1');
+                document.getElementById('featured1').src = thumbnails1[currentActiveIndex1 + 1].src;
+            }
+        });
     </script>
-
+    <!----------------texto info----------->
+    <script>
+       function showText(index) {
+        var contents = document.querySelectorAll(".descricao .content");
+        
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = "none";
+        }
+        
+        contents[index].style.display = "block";
+        }
+        
+        function showText1(index) {
+            var contents1 = document.querySelectorAll(".descricao1 .content1");
+            
+            for (var i = 0; i < contents1.length; i++) {
+                contents1[i].style.display = "none";
+            }
+            
+            contents1[index].style.display = "block";
+        }
+    </script>
     <!----------------mapa----------->
     <script src="mapa/Leaflet.EdgeMarker.js"></script>
     <script src="mapa/leaflet-gesture-handling.js"></script>
@@ -352,8 +441,8 @@
 
         //markers 
         var markervivendas = L.marker([37.077431359509724, -8.08266771575456],{icon: homeIcon}).addTo(map).bindPopup("<b>Vivendas Costa</b><br>"+ '<a href="https://www.google.com/maps/dir//Vivendas+Costa,+Quarteira/@37.0773919,-8.0826557,56m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0xd1ab52d153f506d:0x3958f1601821b693!2m2!1d-8.0826829!2d37.0774151!3e0" target="_blank">Google Maps</a>');
-	var markervivendas = L.marker([37.07752339919067, -8.081508291851513],{icon: homeIcon}).addTo(map).bindPopup("<b>Vivendas Costa</b><br>");
-	var markerCasino = L.marker([37.07355799832836, -8.115873461533367],{icon: casinoIcon}).addTo(map).bindPopup("Casino Vilamoura");
+        var markervivendas = L.marker([37.07752339919067, -8.081508291851513],{icon: homeIcon}).addTo(map).bindPopup("<b>Vivendas Costa</b><br>");
+        var markerCasino = L.marker([37.07355799832836, -8.115873461533367],{icon: casinoIcon}).addTo(map).bindPopup("Casino Vilamoura");
         var markerDisco = L.marker([37.07902271287849, -8.11794130001111],{icon: discoIcon}).addTo(map).bindPopup("Discoteca Seven Vilamoura");
         var markerGolf = L.marker([37.08377565424099, -8.08465642010216],{icon: golfIcon}).addTo(map).bindPopup("Golf Vila Sol");
         var markerMarina = L.marker([37.07644881386153, -8.119069162193327],{icon: marinaIcon}).addTo(map).bindPopup("Marina Vilamoura");
@@ -370,7 +459,7 @@
         //remover edge markers
         //edgeMarkerLayer.destroy();
         
-
+        
     </script>
     
 
